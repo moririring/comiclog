@@ -5,7 +5,6 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 
 
 # Gems used only for assets and not required
@@ -24,8 +23,11 @@ gem 'jquery-rails'
 
 
 group :production do
-  gem 'therubyracer-heroku', '0.8.1.pre3' # you will need this too
   gem 'pg'
+end
+
+group :development, :test do
+  gem 'sqlite3'
 end
 
 # To use ActiveModel has_secure_password
