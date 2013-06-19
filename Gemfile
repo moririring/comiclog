@@ -25,6 +25,7 @@ gem 'jquery-rails'
 group :production do
   gem 'pg'
   gem 'therubyracer-heroku'
+  gem 'rake', '~> 0.8.7'
 end
 
 group :development, :test do
