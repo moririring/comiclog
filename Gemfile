@@ -22,19 +22,10 @@ end
 gem 'jquery-rails'
 
 
-group :production do
-  gem 'pg'
-  gem 'therubyracer-heroku'
-  gem 'rake', '~> 0.8.7'
-end
+gem 'sqlite3', groups: %w(test development), require: false
 
-group :development, :test do
-  gem 'heroku'
-  gem 'rails3-generators'
-  gem 'sqlite3'
-  gem "rspec-rails", ">= 2.0.0.beta.13"
-  gem "factory_girl_rails"
-end
+gem 'pg', groups: %w(production), require: false
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
