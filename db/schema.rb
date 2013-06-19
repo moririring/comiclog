@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130619114808) do
+ActiveRecord::Schema.define(:version => 20130619124820) do
 
   create_table "comics", :force => true do |t|
     t.text     "comic_name"
@@ -19,12 +19,6 @@ ActiveRecord::Schema.define(:version => 20130619114808) do
     t.string   "publisher"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-  end
-
-  create_table "comics2", :force => true do |t|
-    t.text   "comic_name",               :null => false
-    t.string "author",     :limit => 20, :null => false
-    t.string "publisher",  :limit => 40, :null => false
   end
 
 end

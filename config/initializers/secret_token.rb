@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Comiclog::Application.config.secret_token = '1f7a7a4c83bd6bdcc5ed0f243ddaa2cd8f4787d0b8a4b606a8e813296ed9c7c8c5c0ce0ac25e437df0f7143c4caa9d42d275b728dfe9840068cbed17be5f8c15'
+Comiclog::Application.config.secret_token = 'cd030d660880f89208e995a049ecc3def549a9cc069df1ca6bbb657ba28f63991329d595c57632fafdfe4422cadfae6c0697a70c522c15aec4ad4a8ab15a7022'
