@@ -1,7 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  id: 
   writers: MyText
   title: MyText
   publisher: MyText
@@ -14,7 +13,6 @@ one:
   content: MyText
 
 two:
-  id: 
   writers: MyText
   title: MyText
   publisher: MyText
