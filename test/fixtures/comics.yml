@@ -1,13 +1,27 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  id: 1
-  comic_name: MyText
-  author: MyString
-  publisher: MyString
+  id: 
+  writers: MyText
+  title: MyText
+  publisher: MyText
+  turn: MyText
+  price: MyText
+  identification: MyText
+  sale: MyText
+  link: MyText
+  img: MyText
+  content: MyText
 
 two:
-  id: 1
-  comic_name: MyText
-  author: MyString
-  publisher: MyString
+  id: 
+  writers: MyText
+  title: MyText
+  publisher: MyText
+  turn: MyText
+  price: MyText
+  identification: MyText
+  sale: MyText
+  link: MyText
+  img: MyText
+  content: MyText

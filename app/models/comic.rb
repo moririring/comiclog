@@ -1,3 +1,4 @@
 class Comic < ActiveRecord::Base
-  attr_accessible :author, :comic_name, :id, :publisher
+	default_scope :order => 'sale DESC'
+	paginates_per 5
 end
