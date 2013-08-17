@@ -1,25 +1,32 @@
 <p id="notice"><%= notice %></p>
+<!--
+      t.text :writers
+      t.text :title
+      t.text :publisher
+      t.text :turn
+      t.text :price
+      t.text :identification
+      t.text :sale
+      t.text :link
+      t.text :img
+      t.text :content
+-->
+
+
+<p><%= link_to image_tag(@comic.img), @comic.link %></p>
+<p><%= @comic.writers %></p>
+<p><%= @comic.title %></p>
+<p><%= @comic.publisher %></p>
+<p><%= @comic.writers %></p>
+<p><%= @comic.turn %></p>
+<p><%= @comic.price %></p>
+<p><%= @comic.identification %></p>
+<p><%= @comic.sale %></p>
+<p><%= @comic.content %></p>
 
 <p>
-  <b>Id:</b>
-  <%= @comic.id %>
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="moririring" data-lang="ja">ツイート</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </p>
 
-<p>
-  <b>Comic name:</b>
-  <%= @comic.comic_name %>
-</p>
-
-<p>
-  <b>Author:</b>
-  <%= @comic.author %>
-</p>
-
-<p>
-  <b>Publisher:</b>
-  <%= @comic.publisher %>
-</p>
-
-
-<%= link_to 'Edit', edit_comic_path(@comic) %> |
 <%= link_to 'Back', comics_path %>
