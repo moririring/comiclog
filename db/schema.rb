@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(:version => 20130816161650) do
     t.text     "link"
     t.text     "img"
     t.text     "content"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
