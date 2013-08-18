@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<p><%= link_to image_tag(@comic.img), @comic.link %><=Go Amazon!</p>
+<p><%= link_to image_tag(@comic.img), @comic.link %><= Go Amazon!!</p>
 <p><b>タイトル:</b><%= @comic.title %></p>
 <p><b>著者:</b><%= @comic.writers %></p>
 <p><b>出版社:</b><%= @comic.publisher %></p>
@@ -15,18 +15,15 @@
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </p>
 
-<h2>Yondas</h2>
+<h2>どくりょ?</h2>
 <ul>
-<% if @comic.yondas.any? %>
-<% @comic.yondas.each do |yonda| %>
-<li>
-<%= yonda.comment %> (by <%= yonda.user %>)
-</li>
-<% end %>
-<% else %>
-<li>no yonda yet.</li>
-<% end %>
+	<% if @comic.yondas.any? %>
+		<% @comic.yondas.each do |yonda| %>
+			<li><%= yonda.comment %> (by <%= yonda.user %>)</li>
+		<% end %>
+	<% else %>
+		<li>まだ</li>
+	<% end %>
 </ul>
-
 
 <%= link_to 'Back', comics_path %>
