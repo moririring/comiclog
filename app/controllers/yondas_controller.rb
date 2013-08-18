@@ -1,0 +1,2 @@
+class YondasController < ApplicationController
+end

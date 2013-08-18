@@ -11,8 +11,6 @@ class CreateComics < ActiveRecord::Migration
       t.text :link
       t.text :img
       t.text :content
-
-      t.timestamps
     end
   end
 end

@@ -11,21 +11,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130816161650) do
+ActiveRecord::Schema.define(:version => 20130818075202) do
 
   create_table "comics", :force => true do |t|
-    t.text     "writers"
-    t.text     "title"
-    t.text     "publisher"
-    t.text     "turn"
-    t.text     "price"
-    t.text     "identification"
-    t.text     "sale"
-    t.text     "link"
-    t.text     "img"
-    t.text     "content"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.text "writers"
+    t.text "title"
+    t.text "publisher"
+    t.text "turn"
+    t.text "price"
+    t.text "identification"
+    t.text "sale"
+    t.text "link"
+    t.text "img"
+    t.text "content"
   end
+
+  create_table "yondas", :force => true do |t|
+    t.integer  "user"
+    t.text     "comment"
+    t.integer  "comic_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "yondas", ["comic_id"], :name => "index_yondas_on_comic_id"
 
 end
