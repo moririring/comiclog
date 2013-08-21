@@ -14,16 +14,18 @@
 ActiveRecord::Schema.define(:version => 20130818075202) do
 
   create_table "comics", :force => true do |t|
-    t.text "writers"
-    t.text "title"
-    t.text "publisher"
-    t.text "turn"
-    t.text "price"
-    t.text "identification"
-    t.text "sale"
-    t.text "link"
-    t.text "img"
-    t.text "content"
+    t.text     "writers"
+    t.text     "title"
+    t.text     "publisher"
+    t.text     "turn"
+    t.text     "price"
+    t.text     "identification"
+    t.text     "sale"
+    t.text     "link"
+    t.text     "img"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "yondas", :force => true do |t|
