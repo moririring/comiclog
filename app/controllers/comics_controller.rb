@@ -25,6 +25,16 @@ class ComicsController < ApplicationController
  end
 
  def show
-  @comic =Comic.find(params[:id])
+  @comic = Comic.find(params[:id])
+  @yonda = Comic.find(params[:id]).yondas.build
  end
+
+ def create
+    @comic = Comic.new(params[:comic])
+    if @comic.save
+      redirect_to comics_path, notice: '作成されました！'
+    else
+      render action: 'new'
+    end
+  end
 end
