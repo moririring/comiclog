@@ -15,6 +15,21 @@
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </p>
 
+<% if @comic.yondas.any? %>
+	<%= form_for([@comic, @yonda]) do |f| %>
+		<%= link_to 'xYonda', [@yonda.comic, @yonda], :method=>:delete, :remote => true %>
+	<% end %>
+<% else %>
+	<%= form_for([@comic, @yonda]) do |f| %>
+		<div class="actions">
+		  <%= f.submit('Yonda!') %>
+		</div>
+	<% end %>
+<% end %>
+
+
+
+
 <h2>Yonda?</h2>
 <ul>
 	<% if @comic.yondas.any? %>
@@ -34,7 +49,7 @@
 
 <%= form_for([@comic, @yonda]) do |f| %>
 <div class="actions">
-  <%= f.submit %>
+  <%= f.submit('Yonda') %>
 </div>
 <% end %>
 
