@@ -9,27 +9,29 @@
 <p><b>ID:</b><%= @comic.identification %></p>
 <p><b>発売日:</b><%= @comic.sale %></p>
 <p><b>内容:</b><%= @comic.content %></p>
+<p><b>yonda?:</b>
+<% if @comic.yondas.any? %>
+	yonda!
+	<p id="yonda_<%= @comic.yondas[0].id %>">
+		<%= link_to 'mandaに戻す', [@comic, @comic.yondas[0]], :method=>:delete %>
+	</p>
+<% else %>
+	manda
+	<%= form_for([@comic, @yonda]) do |f| %>
+		<div class="actions">
+		  <%= f.submit('Yonda!') %>
+		</div>
+	<% end %>
+<% end %>
+</p>
+
+
+<%= link_to 'Back', comics_path %>
 
 <p>
 <a href="https://twitter.com/share" class="twitter-share-button" data-via="moririring" data-lang="ja">ツイート</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </p>
-
-<% if @comic.yondas.any? %>
-	<p id="yonda_<%= @comic.yondas[0].id %>">
-		<%= button_tag 'Yonda!' %>
-		<%= link_to 'x', [@comic, @comic.yondas[0]], :method=>:delete %>
-	</p>
-<% else %>
-	<%= form_for([@comic, @yonda]) do |f| %>
-		<div class="actions">
-		  <%= f.submit('Yonda?') %>
-		</div>
-	<% end %>
-<% end %>
-
-
-<%= link_to 'Back', comics_path %>
 
 <script>
 $(function() {

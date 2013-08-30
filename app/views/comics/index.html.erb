@@ -17,6 +17,11 @@
     <td><%= comic.writers %></td>
     <td><%= comic.turn %></td>
     <td><%= comic.sale %></td>
+    <% if comic.yondas.any? %>
+        <td>yonda!</td>
+    <% else %>
+        <td>manda</td>
+    <% end %>
   </tr>
   <% end %>
 </table>
