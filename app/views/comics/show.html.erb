@@ -16,9 +16,7 @@
 </p>
 
 <% if @comic.yondas.any? %>
-	<%= form_for([@comic, @yonda]) do |f| %>
-		<%= link_to 'xYonda', [@yonda.comic, @yonda], :method=>:delete, :remote => true %>
-	<% end %>
+	<%= button_to 'xYonda', [@comic, @comic.yondas[0]], :method=>:delete, :remote => true %>
 <% else %>
 	<%= form_for([@comic, @yonda]) do |f| %>
 		<div class="actions">
