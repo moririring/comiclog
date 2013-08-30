@@ -16,40 +16,18 @@
 </p>
 
 <% if @comic.yondas.any? %>
-	<%= button_to 'xYonda', [@comic, @comic.yondas[0]], :method=>:delete, :remote => true %>
+	<p id="yonda_<%= @comic.yondas[0].id %>">
+		<%= button_tag 'Yonda!' %>
+		<%= link_to 'x', [@comic, @comic.yondas[0]], :method=>:delete %>
+	</p>
 <% else %>
 	<%= form_for([@comic, @yonda]) do |f| %>
 		<div class="actions">
-		  <%= f.submit('Yonda!') %>
+		  <%= f.submit('Yonda?') %>
 		</div>
 	<% end %>
 <% end %>
 
-
-
-
-<h2>Yonda?</h2>
-<ul>
-	<% if @comic.yondas.any? %>
-		<% @comic.yondas.each do |yonda| %>
-			<li id="yonda_<%= yonda.id %>">
-			yonda
-			<%= link_to 'delete', [yonda.comic, yonda], :confirm => 'Sure?',
-			                                               :method => :delete,
-			                                               :remote => true %>
-			</li>			                                               		
-		<% end %>
-	<% else %>
-		<li>Mada</li>
-	<% end %>
-</ul>
-
-
-<%= form_for([@comic, @yonda]) do |f| %>
-<div class="actions">
-  <%= f.submit('Yonda') %>
-</div>
-<% end %>
 
 <%= link_to 'Back', comics_path %>
 
