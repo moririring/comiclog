@@ -21,6 +21,7 @@ class ComicsController < ApplicationController
       "著者",
       "巻数",
       "発売日",
+      "読んだ人",
       "yonda?",
     ]
  end

@@ -7,7 +7,7 @@ gem 'rails', '3.2.14'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development, :test do
-	gem 'sqlite3', '1.3.7'#, :path => "C:/Ruby200/sqlite3/"
+	gem 'sqlite3'#, '1.3.8', :path => "C:/Ruby200/sqlite3/"
 end
 
 group :production do
@@ -32,6 +32,8 @@ end
 
 gem 'jquery-rails'
 
+gem 'rails_admin'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -46,3 +48,6 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+
+gem "devise"
