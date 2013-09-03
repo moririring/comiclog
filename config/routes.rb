@@ -1,9 +1,15 @@
 Comiclog::Application.routes.draw do
 
   
+  #get "welcome/index"
 
-  devise_for :admins
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+  #root to: "top#index"
+
+  devise_for :users
+# 　get 'comics', :to => '/', :as => :user_root  
+
+#  devise_for :admins
+#  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   resources :comics do
     resources :yondas
